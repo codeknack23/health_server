@@ -11,6 +11,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
+app.get("/",(req,res)=> res.json({success:true}))
+
 // 🏥 Get nearby hospitals
 app.get("/api/hospitals", async (req, res) => {
   try {
